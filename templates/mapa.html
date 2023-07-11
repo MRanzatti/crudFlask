@@ -1,0 +1,75 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Google Maps - Positions</title>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaSayk4TVLTabK2Rf2TQZNtgRImGwW_lg"></script>
+        <style>
+            #map {
+                height: 1000px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+    <div id="map"></div>
+    <script>
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -18.92295000, lng: -48.27078200}, // coordenada da posição 1, para centralizar
+                zoom: 16
+            });
+        }
+
+        initMap();
+var marker_1 = new google.maps.Marker({position: {lat: -18.92406700, lng: -48.28214200},map: map,title: 'Position 1' });
+var marker_2 = new google.maps.Marker({position: {lat: -18.92376500, lng: -48.28210800},map: map,title: 'Position 2' });
+var marker_3 = new google.maps.Marker({position: {lat: -18.92213500, lng: -48.28205200},map: map,title: 'Position 3' });
+var marker_4 = new google.maps.Marker({position: {lat: -18.92082200, lng: -48.28132800},map: map,title: 'Position 4' });
+var marker_5 = new google.maps.Marker({position: {lat: -18.91951300, lng: -48.28033200},map: map,title: 'Position 5' });
+var marker_6 = new google.maps.Marker({position: {lat: -18.91966300, lng: -48.27849800},map: map,title: 'Position 6' });
+var marker_7 = new google.maps.Marker({position: {lat: -18.92081800, lng: -48.27682200},map: map,title: 'Position 7' });
+var marker_8 = new google.maps.Marker({position: {lat: -18.92195000, lng: -48.27513200},map: map,title: 'Position 8' });
+var marker_9 = new google.maps.Marker({position: {lat: -18.92298100, lng: -48.27350800},map: map,title: 'Position 9' });
+var marker_10 = new google.maps.Marker({position: {lat: -18.92313700, lng: -48.27337200},map: map,title: 'Position 10' });
+var marker_11 = new google.maps.Marker({position: {lat: -18.92372200, lng: -48.27213800},map: map,title: 'Position 11' });
+var marker_12 = new google.maps.Marker({position: {lat: -18.92295000, lng: -48.27078200},map: map,title: 'Position 12' });
+var marker_13 = new google.maps.Marker({position: {lat: -18.91990800, lng: -48.26785500},map: map,title: 'Position 13' });
+var marker_14 = new google.maps.Marker({position: {lat: -18.91765300, lng: -48.26528000},map: map,title: 'Position 14' });
+var marker_15 = new google.maps.Marker({position: {lat: -18.91815100, lng: -48.26453900},map: map,title: 'Position 15' });
+var marker_16 = new google.maps.Marker({position: {lat: -18.91814500, lng: -48.26453700},map: map,title: 'Position 16' });
+
+var lineCoordinates = [
+marker_1.getPosition(),
+marker_2.getPosition(),
+marker_3.getPosition(),
+marker_4.getPosition(),
+marker_5.getPosition(),
+marker_6.getPosition(),
+marker_7.getPosition(),
+marker_8.getPosition(),
+marker_9.getPosition(),
+marker_10.getPosition(),
+marker_11.getPosition(),
+marker_12.getPosition(),
+marker_13.getPosition(),
+marker_14.getPosition(),
+marker_15.getPosition(),
+marker_16.getPosition()];
+        
+
+var polyline = new google.maps.Polyline({
+                path: lineCoordinates,
+                geodesic: true,
+                strokeColor: '#0000ff', // Cor da linha (vermelho)
+                strokeOpacity: 1.0,
+                strokeWeight: 5
+            });
+
+            polyline.setMap(map);
+
+        </script>
+        </body>
+        </html>

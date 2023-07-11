@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuarios</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .container {
+            width: 800px; /* ou qualquer outra largura desejada */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <br>
+    <h5> Cadastro de Usuarios </h5>
+    <form action="{{ url_for('cadastro') }}" method="POST" name="meuform">
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
+            </div>
+            <input type="text" class="form-control" name="nome" aria-label="Nome" required
+                   aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">E-mail</span>
+            </div>
+            <input type="text" class="form-control" name="email" aria-label="E-mail" required
+                   aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">CEP</span>
+            </div>
+            <input type="text" class="form-control" name="cep" aria-label="CEP" required
+                   aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Endereço</span>
+            </div>
+
+            <input type="text" class="form-control" name="endereco" aria-label="endereco" required
+                   aria-describedby="inputGroup-sizing-default">
+
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Número</span>
+            </div>
+            <input type="text" class="form-control" name="numero" aria-label="Numero" required
+                   aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <table>
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-success">Cadastrar</button>
+                </td>
+                <td><a class="btn btn-primary" href="/" role="button">Voltar</a></td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+<script>
+
+
+</script>
+</body>
+</html>
