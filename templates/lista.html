@@ -28,6 +28,9 @@
             <th scope="col">CEP</th>
             <th scope="col">Endereco</th>
             <th scope="col">Numero</th>
+            <th scope="col">Bairro</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Estado</th>
             <th scope="col">Excluir</th>
             <th scope="col">Atualizar</th>
         </tr>
@@ -41,6 +44,9 @@
                 <td>{{ usuario.cep }}</td>
                 <td>{{ usuario.endereco }}</td>
                 <td>{{ usuario.numero }}</td>
+                <td>{{ usuario.bairro }}</td>
+                <td>{{ usuario.cidade }}</td>
+                <td>{{ usuario.estado }}</td>
                 <td><a href="/excluir/{{ usuario.id }}"><i class="fas fa-trash"></i></a></td>
                 <td><a href="/atualizar/{{ usuario.id }}"><i class="fas fa-pencil-alt"></i></a></td>
             </tr>
